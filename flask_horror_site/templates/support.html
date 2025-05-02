@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>🎬 ادعمنا بمشاهدة هذا الإعلان</h1>
+ <!-- مشغل الفيديو -->
+    
+ <video id="supportAd" class="video-js vjs-default-skin" controls controls autoplay muted preload="20%" max-width="200%" height="200%"
+ poster="/static/img/poster.jpg" data-setup='{}'>
+ <source src="/static/videos/te.mp4" type="video/mp4">
+</video>
+
+<video id="supportAd" class="video-js vjs-default-skin" controls controls autoplay muted preload="20%" max-width="200%" height="200%"
+ poster="/static/img/poster.jpg" data-setup='{}'>
+ <source src="/static/videos/sample.mp4" type="video/mp4">
+</video>
+
+<video id="supportAd" class="video-js vjs-default-skin" controls controls autoplay muted preload="20%" max-width="200%" height="200%"
+ poster="/static/img/poster.jpg" data-setup='{}'>
+ <source src="/static/videos/4r.mp4" type="video/mp4">
+</video>
+
+<video id="supportAd" class="video-js vjs-default-skin" controls controls autoplay muted preload="20%" max-width="200%" height="200%"
+poster="/static/img/poster.jpg" data-setup='{}'>
+<source src="/static/videos/3r.mp4" type="video/mp4">
+</video>
+
+<video id="supportAd" class="video-js vjs-default-skin" controls controls autoplay muted preload="20%" max-width="200%" height="200%"
+poster="/static/img/poster.jpg" data-setup='{}'>
+<source src="/static/videos/2r.mp4" type="video/mp4">
+</video>
+
+<video id="supportAd" class="video-js vjs-default-skin" controls controls autoplay muted preload="20%" max-width="200%" height="200%"
+poster="/static/img/poster.jpg" data-setup='{}'>
+<source src="/static/videos/1r.mp4" type="video/mp4">
+</video>
+<br>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var player = videojs('supportAd');
+        player.ima({
+            id: 'supportAd',
+            adTagUrl: 'https://www.videosprofitnetwork.com/watch.xml?key=171807fa55e452b809d8f8f13583413b'
+        });
+        player.ready(function () {
+            player.play();  // بدء الإعلان تلقائيًا
+        });
+    });
+</script>
+{% endblock %}

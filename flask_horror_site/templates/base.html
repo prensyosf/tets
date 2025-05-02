@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}موقع الرعب{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://vjs.zencdn.net/8.9.0/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.9.0/video.min.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-ads@6.9.0/dist/videojs-contrib-ads.min.js"></script>
+    <script src="https://unpkg.com/videojs-ima@1.8.0/dist/videojs.ima.min.js"></script>
+    <link href="https://vjs.zencdn.net/8.9.0/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.9.0/video.min.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-ads@6.9.0/dist/videojs-contrib-ads.min.js"></script>
+    <script src="https://unpkg.com/videojs-ima@1.8.0/dist/videojs.ima.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('video.video-js').forEach(function (el) {
+            var player = videojs(el);
+            player.ima({
+                id: el.id,
+                adTagUrl: 'https://www.videosprofitnetwork.com/watch.xml?key=171807fa55e452b809d8f8f13583413b'
+            });
+        });
+    });
+</script>
+
+
+    <!--<audio id="scream-sound" src="{{ url_for('static', filename='sounds/scream.mp3') }}"></audio>-->
+    <script src="https://www.videosprofitnetwork.com/watch.xml?key=171807fa55e452b809d8f8f13583413b"></script>
+</head>
+<body>
+    
+
+
+    
+    <nav>
+        <a href="/">الرئيسية</a>
+        <a href="/about">من نحن</a>
+        <a href="/why">لماذا أنشأنا الموقع؟</a>
+        <a href="/goal">هدف الموقع</a>
+        <a href="/support">ادعمنا</a>
+        <a href="/admin">إضافة فيديو</a>
+        
+    </nav>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    
+    
+</body>
+</html>
+
+

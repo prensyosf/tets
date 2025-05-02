@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="text-center my-4">🎥 فيديوهات الرعب</h1>
+{% for video in videos %}
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/{{ video.video_id }}" 
+                title="{{ video.title }}" 
+                frameborder="0" 
+                allowfullscreen></iframe>
+    </div>
+    <h3>{{ video.title }}</h3>
+    <p>{{ video.description }}</p>
+    <hr>
+{% endfor %}
+{% endblock %}

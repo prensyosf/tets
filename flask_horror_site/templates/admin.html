@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="text-center my-4">➕ إضافة فيديو رعب</h1>
+<form method="POST">
+    <div class="mb-3">
+        <label class="form-label">عنوان الفيديو</label>
+        <input type="text" class="form-control" name="title"   placeholder="ادخل عنوان الفيديو هنا">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" >معرف الفيديو</label>
+        <input type="text" class="form-control" name="video_id" required placeholder="(ID)أدخل معرف الفيديو هنا">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">وصف الفيديو</label>
+        <textarea class="form-control" name="description" rows="1"  placeholder="ادخل وصف الفيديو هنا"></textarea>
+    </div>
+    <button type="submit" class="btn btn-danger">إضافة</button>
+</form>
+{% endblock %}
